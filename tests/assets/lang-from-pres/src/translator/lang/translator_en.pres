@@ -1,0 +1,57 @@
+﻿
+
+#This file has to have Windows line endings and UTF8 with BOM
+
+#Inline comment
+somekey=Some Key
+another = Another
+  trailing   =    Trailing   
+
+  # Another comment 
+
+    justlike = just<<<LIKE;
+
+simpleheredoc = <<<HEREDOC
+Lorem ipsum dolor sit amet,
+consectetur adipisicing elit,
+
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.
+HEREDOC;
+
+  anotherheredoc = <<<HEREDOC
+  Lorem ipsum dolor sit amet,
+  consectetur adipisicing elit,
+  sed do eiusmod
+  tempor incididunt ut 
+  labore et dolore magna aliqua.
+  Ut enim ad minim veniam,
+HEREDOC>>> Just fancy way to comment, possibly candidat for validation.
+
+# Third comment
+   # first heredoc comment
+    heredocwithcomment =   <<<TRAILING    
+Lorem ipsum dolor sit amet,
+# comment in heredoc 
+consectetur adipisicing TRAILING elit,
+
+sed do eiusmod
+#and last one
+   TRAILING    
+
+onemore = One More
+
+# keylike = comment
+
+galaxyheredoc = <<<docdoc
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+# tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+\#cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+docdoc;

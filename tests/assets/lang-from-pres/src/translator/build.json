@@ -1,0 +1,10 @@
+{
+	"name": "translator",
+	"builds": {
+		"translator": {
+			"jsfiles": [
+				"translator.js"
+			]
+		}
+	}
+}

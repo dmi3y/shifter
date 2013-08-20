@@ -1,0 +1,49 @@
+#This file has to have UNIX line endings and UTF8 no BOM
+
+#Inline comment
+somekey=Some Key
+another = Another
+  trailing   =    Trailing   
+
+  # Another comment 
+
+  justlike = just<<<LIKE;
+
+simpleheredoc = <<<HEREDOC
+Lorem ipsum dolor sit amet,
+consectetur adipisicing elit,
+
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.
+HEREDOC;
+
+# Third comment
+   # first heredoc comment
+heredocwithcomment = <<<OMG
+Lorem ipsum dolor sit amet,
+# comment in heredoc OMG
+consectetur adipisicing elit,
+
+sed do eiusmod OMG
+#OMG;
+#and last one
+   OMG
+
+onemore = One More
+
+# keylike = comment
+
+galaxyheredoc = <<<docdoc
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+# tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+\#cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+docdoc
+
+

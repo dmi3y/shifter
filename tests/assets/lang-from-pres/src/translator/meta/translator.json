@@ -1,0 +1,11 @@
+{
+	"translator": {
+		"requires": [
+			"oop"
+		],
+		"lang": [
+			"en",
+			"ru"
+		]	
+	}
+}
