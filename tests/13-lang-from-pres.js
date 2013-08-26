@@ -70,33 +70,25 @@ var tests = {
                                     pre: [],
                                     post: []
                                 },
-                                self = this;
+                                self = this,
+                                logFileShaSum = function(file, buildPath) {
+                                    fs.readFile(path.join(buildPath, 'translator', 'lang', file), stack.add(function(err, data) {
+                                        var shasum = crypto.createHash('sha1'), d;
+                                        shasum.update(data);
+                                        d = shasum.digest('hex');
+                                        results.post[file] = d;
+                                    }));
+                                },
+                                loopThroughTheLangs = function(buildPath){
+                                    fs.readdir(path.join(buildPath, 'translator', 'lang'), stack.add(function(err, files) {
+                                        files.forEach(function(file) {
+                                            logFileShaSum(file, buildPath);
+                                        });
+                                    }));
+                                };
 
-                            fs.readdir(path.join(buildBase, 'translator', 'lang'), stack.add(function(err, files) {
-                                files.forEach(function(file) {
-                                    (function(file) {
-                                        fs.readFile(path.join(buildBase, 'translator', 'lang', file), stack.add(function(err, data) {
-                                            var shasum = crypto.createHash('sha1'), d;
-                                            shasum.update(data);
-                                            d = shasum.digest('hex');
-                                            results.post[file] = d;
-                                        }));
-                                    }(file));
-                                });
-                            }));
-
-                            fs.readdir(path.join(buildXBase, 'translator', 'lang'), stack.add(function(err, files) {
-                                files.forEach(function(file) {
-                                    (function(file) {
-                                        fs.readFile(path.join(buildXBase, 'translator', 'lang', file), stack.add(function(err, data) {
-                                            var shasum = crypto.createHash('sha1'), d;
-                                            shasum.update(data);
-                                            d = shasum.digest('hex');
-                                            results.pre[file] = d;
-                                        }));
-                                    }(file));
-                                });
-                            }));
+                            loopThroughTheLangs(buildBase);
+                            loopThroughTheLangs(buildXBase);
 
                             stack.done(function() {
                                 self.callback(null, results);
@@ -112,4 +104,4 @@ var tests = {
             }
         }
     }
-}; vows.describe('buiding lang files for intl module from YRB(.pres)').addBatch(tests).export(module);
+}; vows.describe('buiding lang files for intl from YRB(.pres)').addBatch(tests).export(module);
