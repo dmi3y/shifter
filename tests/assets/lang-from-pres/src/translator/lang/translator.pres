@@ -1,7 +1,7 @@
 #This file has to have UNIX line endings and UTF8 no BOM
 
 #Inline comment
-somekey=Some Key
+somekey=Some Key key key key
 another = Another
   trailing   =    Trailing   
 
@@ -23,13 +23,18 @@ heredocwithcomment = <<<OMG
 Lorem ipsum dolor sit amet,
 # comment in heredoc OMG
 consectetur adipisicing elit,
-
+	<<<HEREDOC
+	    !@#$%^&*()_+`~-='   
 sed do eiusmod OMG
 #OMG;
 #and last one
    OMG
 
 onemore = One More
+twomore = \ Two More\ 
+threemore = # Three More#
+
+$andcomplex$one$ = \\\n\t\v\ 
 
 # keylike = comment
 
@@ -37,7 +42,7 @@ galaxyheredoc = <<<docdoc
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 # tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo  \ 
 
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 \#cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non

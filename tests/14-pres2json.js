@@ -25,7 +25,7 @@ var
         'heredoc': {
             pres: '\n   \n\n  \ndochere = <<<heredoc \n = test \n  # heredoc comment \n'+
                           '   \\# not a comment \n key = value \n    heredoc;\n # heredoc trailing comment',
-            json: '{dochere:"= test \\n   \\# not a comment \\n key = value"}'
+            json: '{dochere:" = test \\n   \\# not a comment \\n key = value "}'
         }
     },
     waste = {
